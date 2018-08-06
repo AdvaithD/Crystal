@@ -1,0 +1,9 @@
+name: Crystal
+version: 0.1.0
+
+authors:
+  - Advaith Doosa <advaith@chainist.com>
+
+crystal: 0.25.1
+
+license: MIT
