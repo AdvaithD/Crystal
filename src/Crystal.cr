@@ -1,6 +1,10 @@
-require "./Crystal/*"
+require "http/server"
 
-# TODO: Write documentation for `Crystal`
-module Crystal
-  # TODO: Put your code here
+server = HTTP::Server.new do |context|
+  context.response.content_type = "text/plain"
+  context.response.print "Hello world! The time is #{Time.now}"
 end
+
+address = server.bind_tcp 8000
+puts "Listening on http://#{address}"
+server.listen
